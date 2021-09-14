@@ -1,6 +1,7 @@
 import RotateEnum from "./RotateEnum"
 
 type CardModel = {
+    id: string
     src: string
     alt: string
     rotate: RotateEnum
