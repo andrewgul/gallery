@@ -11,7 +11,7 @@ export const saveData = (payload: CardModel[]): GalleryActionType => ({
     payload
 })
 
-export const changeRotate = (payload: ChangeRotateActionPayload) => ({
+export const changeRotate = (payload: ChangeRotateActionPayload): GalleryActionType => ({
     type: CHANGE_ROTATE,
     payload
 })
