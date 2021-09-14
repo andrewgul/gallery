@@ -14,7 +14,7 @@ const Card: React.FC<CardProps> = ({
     card,
     onRotate
 }) => {
-    const { rotate } = card
+    const { rotate, title, description, src } = card
 
     const handleRotate = (): void => {
         onRotate(index, card.rotate)
@@ -31,13 +31,13 @@ const Card: React.FC<CardProps> = ({
                         [styles['rotate-deg180']]: rotate === RotateEnum.deg180,
                         [styles['rotate-deg270']]: rotate === RotateEnum.deg270
                     })}
-                    style={{backgroundImage: `url('${card.src}')`}}
+                    style={{backgroundImage: `url('${src}')`}}
                 />
             </div>
             <div className={styles['controls']}>
                 <div className={styles['info']}>
-                    <p className={styles['title']}>{card.title}</p>
-                    <p className={styles['description']}>{card.description}</p>
+                    <p className={styles['title']}>{title}</p>
+                    <p className={styles['description']}>{description}</p>
                 </div>
                 <div className={styles['rotate']}>
                     <span
