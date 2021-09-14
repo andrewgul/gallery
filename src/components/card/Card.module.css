@@ -58,7 +58,7 @@
 }
 
 .info {
-    width: 50%;
+    width: 70%;
     padding: 16px;
 }
 
@@ -79,7 +79,7 @@
 }
 
 .rotate {
-    width: 50%;
+    width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,4 +87,5 @@
 
 .rotate-icon {
     cursor: pointer;
+    user-select: none;
 }
