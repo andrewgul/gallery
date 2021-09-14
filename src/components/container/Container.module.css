@@ -4,13 +4,15 @@
     width: 100%;
     max-width: 900px;
     background-color: #FFF;
+    margin: 15px;
 }
 
 .title {
-    padding: 10px;
+    color: #263238;
+    padding: 10px 15px;
     font-size: 24px;
     font-weight: bold;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid rgb(38, 50, 56, 0.54);
 }
 
 .content {
