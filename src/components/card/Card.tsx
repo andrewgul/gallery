@@ -20,10 +20,21 @@ const Card: React.FC<CardProps> = ({
     return (
         <div className={styles['card']}>
             <div
-                className={styles['image-container']}
+                className={styles['image']}
                 style={{backgroundImage: `url('${card.src}')`}}
             />
-            <div onClick={handleRotate}>Rotate {card.rotate}</div>
+            <div className={styles['controls']}>
+                <div className={styles['info']}>
+                    <p className={styles['title']}>{card.title}</p>
+                    <p className={styles['description']}>{card.description}</p>
+                </div>
+                <div className={styles['rotate']}>
+                    <span
+                        className={styles['rotate-icon']}
+                        onClick={handleRotate}
+                    >🔄</span>
+                </div>
+            </div>
         </div>
     )
 }
