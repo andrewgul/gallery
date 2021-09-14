@@ -3,6 +3,7 @@ import { changeRotate, saveData } from './actionCreators'
 import fixture from '../../fixture'
 import RotateEnum from '../../entities/RotateEnum'
 import { RootStore } from '../store'
+import { getNextRotate } from './utils'
 
 export const initData = () => (dispatch: Dispatch) => {
     const savedData = localStorage.getItem('saved_data')
@@ -19,19 +20,6 @@ export const initData = () => (dispatch: Dispatch) => {
     }
 
     dispatch(saveData(fixture))
-}
-
-const getNextRotate = (rotate: RotateEnum): RotateEnum => {
-    switch(rotate) {
-        case RotateEnum.deg0:
-            return RotateEnum.deg90
-        case RotateEnum.deg90:
-            return RotateEnum.deg180
-        case RotateEnum.deg180:
-            return RotateEnum.deg270
-        case RotateEnum.deg270:
-            return RotateEnum.deg0
-    }
 }
 
 export const rotate = (index: number, prevRotate: RotateEnum) => (dispatch: Dispatch, getState: () => RootStore) => {
