@@ -31,10 +31,12 @@ const App: React.FC<AppProps> = ({
     return (
         <div className={styles['app']}>
             <Container>
-                {cards?.map((card) => (
+                {cards?.map((card, index) => (
                     <Card
                         key={card.id}
+                        index={index}
                         card={card}
+                        onRotate={rotate}
                     />
                 ))}
             </Container>
