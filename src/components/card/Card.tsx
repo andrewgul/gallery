@@ -10,9 +10,10 @@ const Card: React.FC<CardProps> = ({
 }) => {
     return (
         <div className={styles['card']}>
-            <div className={styles['image-container']}>
-                <img src={card.src} alt={card.alt} />
-            </div>
+            <div
+                className={styles['image-container']}
+                style={{backgroundImage: `url('${card.src}')`}}
+            />
         </div>
     )
 }
