@@ -9,7 +9,7 @@ const fixture: CardModel[] = [
         rotate: RotateEnum.deg0,
         title: 'Puppy 1',
         description: 'Description',
-        favorite: false 
+        favorite: true 
     },
     {
         id: '0115bd51-03a9-4ac8-85a6-11984bb792a7',

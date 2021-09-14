@@ -3,7 +3,14 @@
     width: 228px;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.12);
     border-radius: 24px 0 24px 24px;
-    overflow: hidden;
+    position: relative;
+}
+
+.star {
+    position: absolute;
+    z-index: 2;
+    right: -13px;
+    top: -16px;
 }
 
 .image-crop {
@@ -12,6 +19,7 @@
     position: relative;
     z-index: 1;
     overflow: hidden;
+    border-top-left-radius: 24px;;
 }
 
 .image {
@@ -45,6 +53,7 @@
 .controls {
     height: calc(240px - 168px);
     display: flex;
+    border-radius: 0 0 24px 24px;
 }
 
 .info {

@@ -2,6 +2,7 @@ import CardModel from '../../entities/CardModel'
 import RotateEnum from '../../entities/RotateEnum'
 import styles from './Card.module.css'
 import cn from 'classnames'
+import { ReactComponent as Star } from '../../assets/star.svg'
 
 interface CardProps {
     index: number
@@ -14,7 +15,7 @@ const Card: React.FC<CardProps> = ({
     card,
     onRotate
 }) => {
-    const { rotate, title, description, src } = card
+    const { rotate, title, description, src, favorite } = card
 
     const handleRotate = (): void => {
         onRotate(index, card.rotate)
@@ -22,6 +23,7 @@ const Card: React.FC<CardProps> = ({
 
     return (
         <div className={styles['card']}>
+            {favorite && (<Star className={styles['star']} />)}            
             <div className={styles['image-crop']}>
                 <div
                     className={cn({
