@@ -6,11 +6,38 @@
     overflow: hidden;
 }
 
-.image {
+.image-crop {
     height: 168px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.image {
+    height: 230px;
+    width: 230px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: absolute;
+    z-index: -1;
+}
+
+.rotate-deg0 {
+    transform: rotate(0);
+}
+
+.rotate-deg90 {
+    transform: rotate(90deg);
+}
+
+.rotate-deg180 {
+    transform: rotate(180deg);
+}
+
+.rotate-deg270 {
+    transform: rotate(270deg);
 }
 
 .controls {
